@@ -17,9 +17,8 @@ public class Object implements IElement {
     public Coordinates getCoordinates() {
         return null;
     }
-
-    @Override
-    public void move(Coordinates coordinates) {
+    public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
     }
+
 }
