@@ -7,8 +7,8 @@ public interface IGrid {
     int getHeight();
 
     IElement getElement(int x, int y);
-    IElement getElement(Coordonate coordonate);
+    IElement getElement(Coordinates coordinates);
 
     void setElement(int x, int y, IElement element);
-    void setElement(Coordonate coordonate, IElement element);
+    void setElement(Coordinates coordinates, IElement element);
 }

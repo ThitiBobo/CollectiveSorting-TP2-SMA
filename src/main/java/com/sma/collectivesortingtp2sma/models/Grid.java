@@ -1,7 +1,5 @@
 package com.sma.collectivesortingtp2sma.models;
 
-import javafx.scene.control.Cell;
-
 public class Grid implements IGrid{
 
     private int width;
@@ -16,7 +14,7 @@ public class Grid implements IGrid{
 
         for (int y = 0; y < this.height; y++) {
             for (int x = 0; x < this.width; x++) {
-                this.grid[][] = new Cell(x, y);
+                this.grid[x][y] = new Cell(new Coordinates(x, y));
             }
         }
 
@@ -38,17 +36,17 @@ public class Grid implements IGrid{
     }
 
     @Override
-    public IElement getElement(Coordonate coordonate) {
-        return getElement(coordonate.getX(), coordonate.getY());
+    public IElement getElement(Coordinates coordinates) {
+        return getElement(coordinates.getX(), coordinates.getY());
     }
 
     @Override
     public void setElement(int x, int y, IElement element) {
-        this.grid.setElement(element);
+        this.grid[x][y].setElement(element);
     }
 
     @Override
-    public void setElement(Coordonate coordonate, IElement element) {
-        setElement(coordonate.getX(), coordonate.getY(), element);
+    public void setElement(Coordinates coordinates, IElement element) {
+        setElement(coordinates.getX(), coordinates.getY(), element);
     }
 }
