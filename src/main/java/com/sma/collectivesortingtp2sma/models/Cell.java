@@ -14,6 +14,10 @@ public class Cell {
         this.element = element;
     }
 
+    public Coordinates getCoordinates() {
+        return this.coordinates;
+    }
+
     public IElement getElement() {
         return element;
     }
