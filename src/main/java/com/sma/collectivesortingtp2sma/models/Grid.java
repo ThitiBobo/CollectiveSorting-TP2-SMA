@@ -38,7 +38,17 @@ public class Grid implements IGrid{
     }
 
     @Override
+    public IElement getElement(Coordonate coordonate) {
+        return getElement(coordonate.getX(), coordonate.getY());
+    }
+
+    @Override
     public void setElement(int x, int y, IElement element) {
         this.grid.setElement(element);
+    }
+
+    @Override
+    public void setElement(Coordonate coordonate, IElement element) {
+        setElement(coordonate.getX(), coordonate.getY(), element);
     }
 }
